@@ -227,6 +227,9 @@ h1 .serif { letter-spacing: -.052em; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding-block: 21px; border-top: 1px solid #d9ded3; font-size: 9px; color: #657060; }
 .footer-bottom a { color: var(--ink); }
 .visual-note { font-size: 8px; }
+.footer-credit { padding-bottom: 22px; text-align: right; color: #657060; font-size: 10px; line-height: 1.6; }
+.footer-credit a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; transition: color .2s; }
+.footer-credit a:hover { color: #577347; }
 .mobile-call-bar { display: none; }
 
 /* Subtle entrance motion; content remains visible without JavaScript. */

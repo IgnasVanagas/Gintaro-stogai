@@ -18,13 +18,15 @@ test('loads all assets without runtime errors and has working contact destinatio
 
 test('a service card selects the matching SMS enquiry', async ({ page }) => {
   await page.goto('/');
-  await page.locator('[data-service="Stogų renovacija"]').click();
-  await expect(page).toHaveURL(/#kontaktai$/);
-  await expect(page.locator('#service-select')).toHaveValue('Stogų renovacija');
-  const href = await page.locator('#sms-link').getAttribute('href');
-  expect(decodeURIComponent(href!)).toContain('domina stogų renovacija');
-  await page.locator('#service-select').selectOption('Skardinimo darbai');
-  expect(decodeURIComponent((await page.locator('#sms-link').getAttribute('href'))!)).toContain('domina skardinimo darbai');
+  for (const service of ['Stogų dengimas', 'Stogų renovacija', 'Stoglangių montavimas', 'Skardinimo darbai']) {
+    await page.locator(`[data-service="${service}"]`).click();
+    await expect(page).toHaveURL(/#kontaktai$/);
+    await expect(page.locator('#service-select')).toHaveValue(service);
+    const href = await page.locator('#sms-link').getAttribute('href');
+    expect(decodeURIComponent(href!)).toContain(`domina ${service.toLocaleLowerCase('lt-LT')}`);
+  }
+  await page.locator('#service-select').selectOption('Stogų dengimas');
+  expect(decodeURIComponent((await page.locator('#sms-link').getAttribute('href'))!)).toContain('domina stogų dengimas');
 });
 
 test('questions open and close with the keyboard', async ({ page }) => {

@@ -56,7 +56,7 @@
       <symbol id="i-roof" viewBox="0 0 48 48"><path d="m5 26 19-17 19 17M10 24v16h28V24M18 40V28h12v12M30 14V8h7v12" /></symbol>
       <symbol id="i-renovation" viewBox="0 0 48 48"><path d="m7 24 17-15 17 15M12 23v17h12M30 10V6h6v10M31 31l-5 13 13-5 7-7-8-8-7 7Zm0 0 8 8" /></symbol>
       <symbol id="i-window" viewBox="0 0 48 48"><path d="M15 8h28L31 41H3L15 8ZM18 14h17l-8 21H10l8-21ZM14 25h16M24 14l-8 21" /></symbol>
-      <symbol id="i-metal" viewBox="0 0 48 48"><path d="M5 13h22l16 13v13H26L10 26H5V13Zm0 0 21 17h17M26 30v9M12 13v8M19 13v14" /></symbol>
+      <symbol id="i-metal" viewBox="0 0 48 48"><path d="m5 19 13-12 14 12M11 19l10-9M18 19l7-6M4 19h33v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3ZM27 26v6l7 5v7h6V34l-7-5v-3M34 40h6" /></symbol>
       <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
       <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14m-7-7v14" /></symbol>
       <symbol id="i-message" viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4V4Zm4 4h8M8 12h5" /></symbol>
@@ -120,7 +120,7 @@
         <div class="container">
           <div class="section-heading reveal">
             <div><p class="eyebrow">01 / MŪSŲ PASLAUGOS</p><h2 id="services-title">Viskas prasideda<br />nuo gero <span class="serif">stogo.</span></h2></div>
-            <p class="section-intro">Statote, atnaujinate ar norite daugiau šviesos?<br />Pasikalbėkime apie tai, ko reikia jūsų namams.</p>
+            <p class="section-intro">Statote, atnaujinate ar norite daugiau šviesos?<br /> Pasikalbėkime apie tai, ko reikia jūsų namams.</p>
           </div>
           <div class="service-grid">
             <a class="service-card reveal" href="#kontaktai" data-service="Stogų dengimas">
@@ -190,7 +190,16 @@
       <section id="kontaktai" class="contact" aria-labelledby="contact-title">
         <div class="container contact-grid">
           <div class="contact-copy reveal"><p class="eyebrow">PRADĖKIME NUO POKALBIO</p><h2 id="contact-title">Jūsų stogui –<br />nauja <span class="serif">pradžia.</span></h2><p>Planuojate stogo darbus ar dar tik svarstote?<br />Papasakokite apie savo namus. Aptarkime, ko reikia.</p><a class="contact-phone" href="tel:+37063340465">+370 633 40465 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg></a><button class="copy-phone" type="button"><svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg><span>Kopijuoti numerį</span></button><span class="sr-only" id="copy-status" role="status"></span></div>
-          <div class="contact-card reveal"><svg class="contact-card-icon" aria-hidden="true"><use href="#i-message" /></svg><h3>Patogiau parašyti?</h3><p>Pasirinkite paslaugą ir pradėkite pokalbį SMS žinute.</p><label for="service-select">Kokie darbai domina?</label><select id="service-select" name="service"><option value="">Pasirinkite paslaugą</option>Stogų dengimas</option><option>Stogų renovacija</option><option>Stoglangių montavimas</option><option>Skardinimo darbai</option><option>Noriu pasitarti</option></select><a id="sms-link" class="button button-lime" href="sms:+37063340465?body=Sveiki%2C%20nor%C4%97%C4%8Diau%20pasitarti%20d%C4%97l%20stogo%20darb%C5%B3.">Rašyti SMS <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg></a><p class="sms-note">Atsidarys jūsų įrenginio žinučių programa.</p></div>
+          <div class="contact-card reveal"><svg class="contact-card-icon" aria-hidden="true"><use href="#i-message" /></svg><h3>Patogiau parašyti?</h3><p>Pasirinkite paslaugą ir pradėkite pokalbį SMS žinute.</p><label for="service-select">Kokie darbai domina?</label>
+            <select id="service-select" name="service">
+              <option value="">Pasirinkite paslaugą</option>
+              <option value="Stogų dengimas">Stogų dengimas</option>
+              <option value="Stogų renovacija">Stogų renovacija</option>
+              <option value="Stoglangių montavimas">Stoglangių montavimas</option>
+              <option value="Skardinimo darbai">Skardinimo darbai</option>
+              <option value="Noriu pasitarti">Noriu pasitarti</option>
+            </select>
+            <a id="sms-link" class="button button-lime" href="sms:+37063340465?body=Sveiki%2C%20nor%C4%97%C4%8Diau%20pasitarti%20d%C4%97l%20stogo%20darb%C5%B3.">Rašyti SMS <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg></a><p class="sms-note">Atsidarys jūsų įrenginio žinučių programa.</p></div>
         </div>
       </section>
     </main>
@@ -199,6 +208,7 @@
       <div class="container">
         <div class="footer-main"><a class="brand" href="#" aria-label="Gintaro stogai – į pradžią"><svg class="brand-mark" viewBox="0 0 46 44" fill="none" aria-hidden="true"><path d="m3 23 20-18 20 18M9 34l14-13 14 13" stroke="currentColor" stroke-width="4.5" /></svg><span>gintaro<span class="brand-second">stogai<span class="brand-dot">.</span></span></span></a><div class="footer-address"><span>MB „Gintaro stogai“</span><a href="https://maps.google.com/maps?q=Laisv%C4%97s%20g.%202%2C%20Laum%C4%97n%C5%B3%20k.%2C%20LT-53135%20Kauno%20r." target="_blank" rel="noopener noreferrer">Laisvės g. 2, Laumėnų k.<br />LT-53135 Kauno r. <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg></a></div><div class="footer-legal"><span>Įmonės kodas: 306109073</span><span>PVM kodas: LT100017213717</span><a href="https://rekvizitai.vz.lt/imone/gintaro_stogai/" target="_blank" rel="noopener noreferrer">Įmonės rekvizitai <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg></a></div></div>
         <div class="footer-bottom"><span>© <span id="year">2026</span> Gintaro stogai. Visos teisės saugomos.</span><span class="visual-note">Vaizdai – architektūrinės vizualizacijos.</span><a href="#">Į viršų ↑</a></div>
+        <p class="footer-credit">Svetainę projektavo <a href="https://wunderbit.lt" target="_blank" rel="noopener noreferrer">wunderbit.lt</a></p>
       </div>
     </footer>
 
